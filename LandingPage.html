@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .topnav {
+            overflow: hidden;
+            background-color:#2e2f30;
+        }
+
+        .forAlign {
+            margin-left: 550px;
+        }
+
+        .topnav a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+
+        }
+
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .topnav a.active {
+            background-color: #1c33c5;
+            color: white;
+        }
+
+        .topnav .icon {
+            display: none;
+        }
+
+        @media screen and (max-width: 600px) {
+            .topnav a:not(:first-child) {
+                display: none;
+            }
+
+            .topnav a.icon {
+                float: right;
+                display: block;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .topnav.responsive {
+                position: relative;
+            }
+
+            .topnav.responsive .icon {
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+
+            .topnav.responsive a {
+                float: none;
+                display: block;
+                text-align: left;
+            }
+        }
+    </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+        :root {
+            --primaryColor: rgb(25, 119, 242);
+            --buttonColor: rgb(66, 183, 41);
+            --bodyColor: rgb(149, 155, 160);
+            --textColor: rgb(27, 30, 33);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bodyColor);
+            font-family: 'Roboto', sans-serif;
+
+        }
+
+        button {
+            border: none;
+        }
+
+        #container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10%;
+        }
+
+        .text__wrapper {
+            width: 37vw;
+            margin-right: 3%;
+            margin-top: 5%;
+        }
+
+        .description {
+            color: var(--textColor);
+            font-weight: 900;
+            font-size: 30px;
+            float: left;
+        }
+
+        .form__wrapper {
+            width: 300px;
+            height: 250px;
+            margin-top: 5%;
+            background-color: rgb(231, 229, 229);
+            border-radius: 10px;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            border: 3px solid black;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.688), 0 6px 20px 0 rgba(0, 0, 0, 0.315);
+        }
+
+        .form {
+            margin-top: -18%;
+            margin-bottom: 7%;
+        }
+
+        .loginButton {
+            background-color: var(--primaryColor);
+            color: #fff;
+            margin-top: 20%;
+            cursor: pointer;
+            border-radius: 3px;
+            color: #fff;
+            padding: 6px;
+            width: 100%;
+        }
+
+        .registerButton {
+            background-color: var(--buttonColor);
+            color: #fff;
+            width: 100%;
+            padding: 8px;
+            margin: 0 auto;
+            margin-top: 10%;
+            cursor: pointer;
+        }
+
+        /* Responsive Design */
+
+        /* Small Mobile Device */
+        @media (max-width: 320px) {
+            #container {
+                display: grid;
+                margin-top: 10vh;
+                justify-content: center;
+            }
+
+            .text__wrapper {
+                width: 100%;
+                margin-right: 3%;
+                margin-top: -5%;
+                text-align: center;
+                margin: 0 auto;
+            }
+
+            .description {
+                margin-bottom: 10%;
+            }
+
+            .form__wrapper {
+                margin: 0 auto;
+                height: 200px;
+                background-color: #fff;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            }
+
+            .form {
+                margin-top: -5%;
+            }
+
+            .loginButton {
+                background-color: var(--primaryColor);
+                color: #fff;
+                margin-top: 2%;
+            }
+
+            .registerButton {
+                background-color: var(--buttonColor);
+                color: #fff;
+                font-size: 10px;
+                width: 60%;
+                padding: 8px;
+                font-weight: bold;
+                margin: 0 auto;
+            }
+        }
+
+        /* Average Mobile Devices */
+        @media (min-width: 320px) and (max-width: 480px) {
+            #container {
+                display: grid;
+                margin-top: 10vh;
+                justify-content: center;
+            }
+
+            .text__wrapper {
+                width: 100%;
+                margin-right: 3%;
+                margin-top: -5%;
+                text-align: center;
+            }
+
+            .description {
+                margin-bottom: 5%;
+            }
+
+            .form__wrapper {
+                width: 220px;
+                height: 200px;
+                margin-left: 3%;
+                background-color: #fff;
+                padding: 5% 2% 5% 2%;
+                border-radius: 5px;
+                margin: 0 auto;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            }
+
+            .form {
+                margin-top: -8%;
+            }
+
+            .loginButton {
+                background-color: var(--primaryColor);
+                color: #fff;
+                margin-top: 2%;
+            }
+
+            .registerButton {
+                background-color: var(--buttonColor);
+                color: #fff;
+                font-size: 10px;
+                width: 60%;
+                padding: 8px;
+                font-weight: bold;
+                margin: 0 auto;
+                margin-top: 3%;
+                margin-bottom: 3%;
+            }
+        }
+
+        /* Tablet and IPads */
+        @media (min-width: 481px) and (max-width: 768px) {
+            #container {
+                display: grid;
+                margin-top: 10vh;
+                justify-content: center;
+            }
+
+            .text__wrapper {
+                width: 100%;
+                margin-right: 3%;
+                margin-top: -5%;
+                text-align: center;
+            }
+
+            .description {
+                margin-bottom: 5%;
+            }
+
+            .form__wrapper {
+                width: 220px;
+                height: 220px;
+                margin-left: 3%;
+                background-color: #fff;
+                padding: 5% 2% 5% 2%;
+                border-radius: 5px;
+                margin: 0 auto;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            }
+
+            .form {
+                margin-top: -8%;
+            }
+
+            .loginButton {
+                background-color: var(--primaryColor);
+                color: #fff;
+                margin-top: 2%;
+            }
+
+            .registerButton {
+                background-color: var(--buttonColor);
+                color: #fff;
+                font-size: 10px;
+                width: 60%;
+                padding: 8px;
+                font-weight: bold;
+                margin: 0 auto;
+                margin-top: 3%;
+                margin-bottom: 3%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="topnav" id="myTopnav">
+        <div class="forAlign">
+            <a href="#home" class="active">Home</a>
+            <a href="#support">Support</a>
+            <a href="#contact">Contact Us</a>
+            <a href="#about">About Us</a>
+        </div>
+    </div>
+
+    <div id="container">
+        <div class="text__wrapper">
+            <p class="description">Chat Mate helps you connect and share with the people in your life.</p>
+        </div>
+        <div class="form__wrapper">
+            <form class="form">
+                <div>
+                    <button type="submit" class="loginButton btn">Login</button>
+                    <button type="submit" class="registerButton btn">SignUp</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
